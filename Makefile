@@ -61,6 +61,7 @@ build/Makefile: CMakeLists.txt
 	cd build && \
 	cmake -DCMAKE_INSTALL_PREFIX=/opt/libtorch ..
 
+#	cmake -DCMAKE_INSTALL_PREFIX=/mnt/store/local/anaconda3/envs/pytorch1.7.1/lib/python3.8/site-packages/torch ..
 
 build/libds_trt_tsc_bridge.so: build/Makefile ds_trt_tsc_bridge.cpp
 	cd build && cmake --build . --config Debug

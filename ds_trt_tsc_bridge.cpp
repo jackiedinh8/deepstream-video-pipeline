@@ -1,5 +1,5 @@
 #include <torch/script.h>
-#include <torchvision/nms.h>
+#include <torchvision/ops/nms.h>
 #include <c10/cuda/CUDAGuard.h>
 #include <nvToolsExt.h>
 

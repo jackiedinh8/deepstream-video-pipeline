@@ -47,7 +47,7 @@ if __name__ =='__main__':
     print(torchscript_model(*intermediate_result))
 
     with torch.jit.optimized_execution(should_optimize=True):
-        for gpu_id in range(2):
+        for gpu_id in range(1):
             traced_module = torch.jit.trace(
                 torchscript_model.to(torch.device('cuda', gpu_id)),
                 tuple(r.to(torch.device('cuda', gpu_id)) for r in intermediate_result),
